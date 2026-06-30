@@ -1,18 +1,8 @@
 <div align="center">
 
-<br>
-
-# PRIYANKA PRAVIN SAGALGILE
-
-<br>
-
-**SITE RELIABILITY ENGINEER**
+![Header](https://capsule-render.vercel.app/api?type=soft&color=0:4B4B6B,100:6E6E8F&height=160&section=header&text=Priyanka%20Sagalgile&fontSize=42&fontColor=FFFFFF&fontAlignY=40&desc=Principal%20Site%20Reliability%20Engineer&descAlignY=62&descSize=18)
 
 *Infrastructure · Observability · Cloud Resilience*
-
-<br>
-
-[![LinkedIn](https://img.shields.io/badge/CONNECT-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
 
 <br>
 
@@ -24,9 +14,9 @@
 
 ## About
 
-I build and operate systems that don't go down — and when they do, I make sure they recover fast and recover well. My focus is reliability engineering at scale: designing resilient cloud infrastructure, automating away toil, and building observability that tells the truth before customers have to.
-
-I think in terms of failure domains, blast radius, and SLOs — not just uptime dashboards.
+Systems fail. The question is whether they fail loudly in production at 2 AM, or quietly in a chaos experiment on a Tuesday afternoon. I spend my time making sure it's the latter.
+My work sits at the intersection of cloud infrastructure, automation, and observability — designing systems that are resilient by architecture, not by luck, and building the signal that tells us something's wrong before a customer does.
+I measure success in fewer pages, faster recovery, and infrastructure that survives the engineer who built it.
 
 <br>
 
@@ -91,8 +81,6 @@ I think in terms of failure domains, blast radius, and SLOs — not just uptime 
 
 <div align="center">
 
-**LET'S CONNECT**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
+[![LinkedIn](https://img.shields.io/badge/CONNECT-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
 
 </div>
