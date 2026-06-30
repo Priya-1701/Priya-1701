@@ -1,124 +1,119 @@
-<h1 align="center">Hi, I'm Priyanka Pravin Sagalgile 👋</h1>
-<h3 align="center">Principal Site Reliability Engineer | AWS | Distributed Systems @ Scale</h3>
+<div align="center">
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/priyanka-sagalgile"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-</p>
+# Priyanka Pravin Sagalgile
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Priya-1701&style=for-the-badge&color=blueviolet" alt="profile views"/>
-  <img src="https://img.shields.io/github/followers/Priya-1701?style=for-the-badge&color=blue" alt="followers"/>
-</p>
+### Principal Site Reliability Engineer · AWS · Distributed Systems @ Scale
 
----
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2800&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=I+don't+fix+outages.+I+make+them+statistically+unlikely.;Multi-region+by+default.+Single+points+of+failure+by+accident.;Error+budgets+gate+releases%2C+not+vibes.;Every+incident+ships+a+fix%2C+not+just+a+writeup." alt="typing-svg" />
 
-### 🧭 About Me
+[![LinkedIn](https://img.shields.io/badge/Priyanka_Sagalgile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
 
-I design, build, and run **highly available, fault-tolerant distributed systems** at scale. My work sits at the intersection of software engineering, infrastructure, and operations — reducing toil, eliminating single points of failure, and turning incidents into institutional learning.
+</div>
 
-- 🔭 Currently driving **reliability strategy** across multi-region, multi-account AWS environments
-- ⚙️ Specialize in **observability, chaos engineering, capacity planning, and incident command**
-- 📈 Obsessed with **error budgets, SLOs, and the economics of uptime**
-- 🧠 I treat every incident as a systems-design problem, not a blame exercise
-- 🤝 Mentoring engineers on operational excellence and on-call sanity
-- 🗣️ Occasional speaker/writer on SRE culture, postmortems, and platform engineering
+<br>
 
----
+> Anyone can restart a process at 3am. That's the symptom, not the job. The job is designing the system so that failure mode never earns a page in the first place. I work where "it works on staging" becomes "it survives a region loss, a noisy neighbor, and a bad deploy — at the same time, during a traffic spike."
 
-### 🏗️ Core Domains
+<br>
+
+## 🧬 How I'd architect a system I'd actually trust
+
+```
+                         ┌────────────────────┐
+                         │   Route 53 (DNS)    │
+                         │   health-based       │
+                         └──────────┬───────────┘
+                    ┌────────────────┴────────────────┐
+                    ▼                                  ▼
+          ┌──────────────────┐               ┌──────────────────┐
+          │  Region: us-east  │               │  Region: us-west │
+          │   ──ACTIVE──      │◄─────────────►│   ──ACTIVE──     │
+          │   EKS + ASG        │   replica     │   EKS + ASG      │
+          └─────────┬──────────┘               └─────────┬────────┘
+                    │                                     │
+          ┌─────────┴──────────┐               ┌─────────┴────────┐
+          │  RDS (multi-AZ)     │               │  RDS (multi-AZ)  │
+          │  DynamoDB Global     │               │  DynamoDB Global │
+          └──────────────────────┘               └────────────────────┘
+
+  blast radius   →  one region, never two
+  failover time  →  < 90s, automated, zero humans in the loop
+  chaos-tested   →  monthly, on purpose, before customers find it for us
+```
+
+<br>
+
+## 🔥 Incident log — the kind that taught me something
 
 <table>
 <tr>
-<td valign="top" width="50%">
+<td width="90"><img src="https://img.shields.io/badge/SEV--1-D32F2F?style=for-the-badge"/></td>
+<td>
 
-**Reliability Engineering**
-- SLI/SLO/SLA definition & error budget policy
-- Chaos engineering & fault injection (FIS, Gremlin)
-- Incident command, blameless postmortems
-- Disaster recovery & multi-region failover
-
-**Infrastructure & Platform**
-- AWS (EC2, EKS, Lambda, RDS, DynamoDB, S3, VPC)
-- Infrastructure as Code (Terraform, CDK)
-- Kubernetes at scale, service mesh (Istio/App Mesh)
-- CI/CD pipelines & progressive delivery (canary, blue/green)
+**Manual failover took 40 minutes under pressure.**
+Five whys landed on the real root cause: *the system trusted a human more than automation.* Shipped active-active multi-region failover, DNS-driven, zero manual steps.
+**Result → next failure of this class: resolved in 88 seconds. Nobody paged.**
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td width="90"><img src="https://img.shields.io/badge/ORG--WIDE-F9A825?style=for-the-badge"/></td>
+<td>
 
-**Observability**
-- Metrics, logging, tracing (Prometheus, Grafana, OpenTelemetry)
-- Datadog / CloudWatch / Honeycomb instrumentation
-- Anomaly detection & alert tuning (signal over noise)
-- Distributed tracing for root-cause analysis
+**Every team had its own definition of "down."**
+Incident severity was being argued live, on the bridge, instead of decided in advance. Built a standardized SLO framework with error budgets wired into release gates — adopted across 30+ services.
+**Result → the argument moved from the incident channel to the design review, where it belongs.**
 
-**Performance & Scale**
-- Capacity planning & load testing (k6, Locust, Gatling)
-- Auto-scaling strategy & cost-aware reliability
-- Database reliability (replication, sharding, failover)
-- Edge/CDN architecture (CloudFront, Route 53, Global Accelerator)
+</td>
+</tr>
+<tr>
+<td width="90"><img src="https://img.shields.io/badge/SILENT-455A64?style=for-the-badge"/></td>
+<td>
+
+**P1s were being discovered by customers before they were discovered by us.**
+Stood up scheduled chaos engineering against the failure domains most likely to actually break.
+**Result → 60% drop in P1 volume.** Failures still happen — just in a test, on a Tuesday, with a coffee in hand.
 
 </td>
 </tr>
 </table>
 
----
+*(Illustrative numbers — swap in your real incident data. The format is the point: every claim has a root cause and a receipt.)*
 
-### 🛠️ Tech Stack
+<br>
 
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
-![Datadog](https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![GitHubActions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Istio](https://img.shields.io/badge/Istio-466BB0?style=for-the-badge&logo=istio&logoColor=white)
+## 📡 What I optimize for, not what I claim
 
----
+| Signal | Target | Why it's not negotiable |
+|---|---|---|
+| **MTTD** | minutes, not customer tickets | if a dashboard didn't catch it, the dashboard is the bug |
+| **MTTR** | seconds to low minutes | recovery speed is a design decision, made *before* the incident |
+| **Blast radius** | one AZ / one region, contained | a global outage means the isolation boundary was theoretical |
+| **Toil** | trending down, every quarter | if it's the third runbook this month, it should be code |
+| **On-call load** | sustainable, sub-2-page nights | burnt-out engineers write worse postmortems |
 
-### 📊 GitHub Stats
+<br>
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Priya-1701&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Priya-1701&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
+## 🛠️ Stack
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Priya-1701&theme=tokyonight&hide_border=true" alt="streak stats"/>
-</p>
+<div align="center">
+<img src="https://skillicons.dev/icons?i=aws,kubernetes,terraform,docker,grafana,prometheus,python,githubactions,linux,bash&theme=dark" />
+</div>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Priya-1701&theme=tokyo-night&hide_border=true" alt="activity graph"/>
-</p>
+<div align="center">
 
----
+`EC2` `EKS` `Lambda` `RDS (multi-AZ)` `DynamoDB Global Tables` `S3` `VPC` `Route 53` `CloudFront` `Global Accelerator` · `CDK` · `OpenTelemetry` `CloudWatch` · `AWS FIS` `Gremlin` `k6` `Locust` · canary & blue/green delivery
 
-### 🎯 Operating Principles
+</div>
 
-> *"Hope is not a strategy. Redundancy is."*
+<br>
 
-- **MTTR over MTBF** — systems will fail; the goal is fast, safe recovery
-- **Automate the toil, escalate the judgment** — runbooks for the known, humans for the novel
-- **No blameless postmortem is complete without a structural fix**
-- **Every dashboard should answer "is the user happy?" before "is the box on fire?"**
-- **Reliability is a feature with a budget, not an absolute**
+<div align="center">
 
----
+```
+$ echo $PHILOSOPHY
+"Hope is not a strategy. Redundancy, tested under real load, is."
+```
 
-### 📌 Pinned Highlights
+</div>
 
-- 🏆 Led migration to multi-region active-active architecture, cutting failover time from 40 min → 90 sec
-- 🏆 Built org-wide SLO framework adopted across 30+ services
-- 🏆 Reduced P1 incident volume by 60% through proactive chaos testing
-- 🏆 Authored on-call sustainability program, cutting after-hours pages by half
-
-*(Replace with your real wins — numbers are placeholders to show the format.)*
-
----
-
-<p align="center"><i>"You build it, you run it — and you make sure it never wakes you up at 3 AM twice for the same reason."</i></p>
