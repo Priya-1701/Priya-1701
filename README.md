@@ -1,13 +1,26 @@
 <div align="center">
 
-# Priyanka Pravin Sagalgile
-### Site Reliability Engineer — Infrastructure, Observability & Cloud Resilience
+<br>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-priyanka--sagalgile-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
+# PRIYANKA PRAVIN SAGALGILE
+
+<br>
+
+**SITE RELIABILITY ENGINEER**
+
+*Infrastructure · Observability · Cloud Resilience*
+
+<br>
+
+[![LinkedIn](https://img.shields.io/badge/CONNECT-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
+
+<br>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 </div>
 
----
+<br>
 
 ## About
 
@@ -15,7 +28,11 @@ I build and operate systems that don't go down — and when they do, I make sure
 
 I think in terms of failure domains, blast radius, and SLOs — not just uptime dashboards.
 
----
+<br>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<br>
 
 ## Core Expertise
 
@@ -52,7 +69,11 @@ I think in terms of failure domains, blast radius, and SLOs — not just uptime 
 
 </div>
 
----
+<br>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<br>
 
 ## What I Work On
 
@@ -62,10 +83,16 @@ I think in terms of failure domains, blast radius, and SLOs — not just uptime 
 - Treating on-call as a design problem — fewer pages, better pages
 - Translating noisy metrics into actionable SLIs/SLOs that engineering teams actually trust
 
----
+<br>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<br>
 
 <div align="center">
 
-**Let's connect:** [LinkedIn](https://www.linkedin.com/in/priyanka-sagalgile)
+**LET'S CONNECT**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
 
 </div>
