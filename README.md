@@ -4,27 +4,23 @@
 
 *Infrastructure · Observability · Cloud Resilience*
 
-<br>
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[![LinkedIn](https://img.shields.io/badge/CONNECT-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
 
 </div>
 
-<br>
+![divider](https://capsule-render.vercel.app/api?type=rect&color=0:4B4B6B,100:6E6E8F&height=3&section=header)
 
-## About
+### 🛠️ About
 
-Systems fail. The question is whether they fail loudly in production at 2 AM, or quietly in a chaos experiment on a Tuesday afternoon. I spend my time making sure it's the latter.
-My work sits at the intersection of cloud infrastructure, automation, and observability — designing systems that are resilient by architecture, not by luck, and building the signal that tells us something's wrong before a customer does.
-I measure success in fewer pages, faster recovery, and infrastructure that survives the engineer who built it.
+Most of my work is invisible by design — the deployments that didn't fail, the spike that got absorbed before anyone noticed, the 3 AM alert that auto-resolved before it became a page. That's the job: making reliability look uneventful.
 
-<br>
+I work where infrastructure, automation, and observability meet — turning fragile, manually-stitched systems into ones that are version-controlled, self-healing, and boring in the best possible way. I'd rather spend a week building a system that prevents an incident than spend a night firefighting one.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+If a system can fail, I want to know how, before it does.
 
-<br>
+![divider](https://capsule-render.vercel.app/api?type=rect&color=0:4B4B6B,100:6E6E8F&height=3&section=header)
 
-## Core Expertise
+### ⚙️ Core Expertise
 
 **Cloud & Infrastructure**
 <div>
@@ -52,35 +48,26 @@ I measure success in fewer pages, faster recovery, and infrastructure that survi
 
 </div>
 
-**Automation**
+**Automation & CI/CD**
 <div>
 
 ![Bash](https://img.shields.io/badge/Bash-000000?style=flat-square&logo=gnubash&logoColor=4EAA25)
+![Jenkins](https://img.shields.io/badge/Jenkins-000000?style=flat-square&logo=jenkins&logoColor=D24939)
 
 </div>
 
-<br>
+![divider](https://capsule-render.vercel.app/api?type=rect&color=0:4B4B6B,100:6E6E8F&height=3&section=header)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+### 🎯 What I Work On
 
-<br>
+**Building infrastructure that doesn't need babysitting** — codifying environments in Terraform so they're reproducible, reviewable, and never a one-off snowflake someone's afraid to touch.
 
-## What I Work On
+**Closing the gap between "something broke" and "we know why"** — tuning Prometheus, Grafana, and Splunk so the right signal reaches the right person, instead of burying it in noise nobody reads at 2 AM.
 
-- Designing infrastructure with reliability and cost-efficiency as first-class constraints, not afterthoughts
-- Reducing MTTR through better signal, not more dashboards
-- Codifying infrastructure so environments are reproducible, auditable, and disposable
-- Treating on-call as a design problem — fewer pages, better pages
-- Translating noisy metrics into actionable SLIs/SLOs that engineering teams actually trust
+**Shipping changes without holding my breath** — Jenkins pipelines and automation that make deployments routine instead of an event, so releases stop being something teams schedule around.
 
-<br>
+**Treating on-call as a design flaw to fix, not a rotation to survive** — every recurring page is a system asking to be automated.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-<br>
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/CONNECT-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priyanka-sagalgile)
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:4B4B6B,100:6E6E8F&height=100&section=footer)
 
 </div>
