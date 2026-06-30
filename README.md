@@ -1,4 +1,3 @@
-<div align="center">
 Priyanka Pravin Sagalgile
 
 Site Reliability Engineer — Infrastructure, Observability & Cloud Resilience
